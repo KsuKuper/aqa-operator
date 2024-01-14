@@ -21,7 +21,9 @@ console.log(`Средний балл: ${averageScore}`);
 // Извлечение первой буквы имени
 const shortenedName = firstName.slice(0, 1) + ".";
 // Вывод результата в консоль
-console.log(`Средний балл студента ${shortenedName} ${lastName} за домашние задания по модулям:`);
+console.log(
+  `Средний балл студента ${shortenedName} ${lastName} за домашние задания по модулям:`
+);
 console.log(`- введение: ${introScore}`);
 console.log(`- git: ${gitScore}`);
 console.log(`- js: ${jsScore}`);
