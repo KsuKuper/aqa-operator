@@ -1,14 +1,27 @@
 // Получить массив объектов из файла json
-const players = require("./test_data.json");
+// const players = require("./test_data.json");
+
+const players = [];
+const generateTestData = () => {
+  const names = ["John", "Emma", "Michael", "Sophia", "Daniel"];
+  for (let i = 1; i <= 5; i++) {
+    const player = {
+      id: i,
+      name: names[i - 1],
+      scorePoints: Math.floor(Math.random() * 100) + 1,
+    };
+    players.push(player);
+  }
+};
 
 // Вариант решения с for..in
 
 // Создать пустой массив для хранения очков
 let scores = [];
 // Заполнить новый массив значениями очков
-for (let i in players) {
-  scores.push(players[i].scorePoints);
-}
+// for (let i in players) {
+//   scores.push(players[i].scorePoints);
+// }
 // Использование Math для поиска максимального значения
 let maxScore = Math.max(...scores);
 // Поиск игрока с максимальным значением очков и вывод в консоль
