@@ -5,15 +5,27 @@ class Button {
     this.type = type;
     this.color = color;
   }
+
   onClick() {
-    console.log(this.props);
+    console.log(`Width: ${this.width}`);
+    console.log(`Height: ${this.height}`);
+    console.log(`Type: ${this.type}`);
+    console.log(`Color: ${this.color}`);
   }
 }
-function testButton() {
-  const myButton = new Button(80, 40, "button", "blue");
-  console.log(myButton.width === 80);
-  console.log(myButton.height === 40);
-  console.log(myButton.type === "button");
-  console.log(myButton.color === "blue");
+function testButton(compareWidth, compareHeight, compareType, compareColor) {
+  const myButton = new Button(80, 40, "button", "green");
+
+  console.log(myButton.width === compareWidth);
+  console.log(myButton.height === compareHeight);
+  console.log(myButton.type === compareType);
+  console.log(myButton.color === compareColor);
+
+  myButton.onClick();
 }
-testButton();
+testButton(80, 40, "button", "green");
+
+// Теперь функция `testButton` принимает аргументы `compareWidth`, `compareHeight`, `compareType` и `compareColor`,
+// которые используются для сравнения с параметрами объекта `myButton`.
+// Вызов функции `testButton` с передачей соответствующих значений позволит сравнить параметры одной кнопки с другой.
+// Метод `onClick` теперь вызывается как `myButton.onClick()` и выводит объект `this` в консоль.
