@@ -1,0 +1,24 @@
+{
+  "name": "project_nodejs",
+  "version": "1.0.0",
+  "description": "some description",
+  "main": "hm_2.3.2.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/KsuKuper/aqa-operator)"
+  },
+  "keywords": [
+    "npm",
+    "test"
+  ],
+  "author": "Kuper",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^5.0.3",
+    "jest": "^29.7.0"
+  }
+}
